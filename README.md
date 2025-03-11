@@ -14,4 +14,18 @@ This project demonstrates skills in C programming, graphics programming, memory 
 - `textures`: Contains .xpm image files that are loaded into the game.
 - `README.md`: Project overview and usage instructions.
 
+### KEY FEATURES
+**Dynamic map parsing:** Reads and validates maps from `.ber` files.
+
+**Player movement:** Allows the player to move up, down, left, and right.
+
+**Collectibles:** The player must collect all items before reaching the exit.
+
+**Win condition:** The game ends when the player reaches the exit after collecting all items.
+
+**Graphics:** Renders the game using the MinilibX library.
+
+**Error handling:** Robust error handling for invalid maps, missing files, and memory allocation issues.
+
+**Path validation:** Ensures the map has a valid path for the player to collect all items and reach the exit.
 
