@@ -10,4 +10,8 @@ This project demonstrates skills in C programming, graphics programming, memory 
 - `src`: Contains the source code for the program.
 - `includes`: Contains the header file `so_long.h`, `libft`, which is a custom library for utility functions, and the graphics library `minilibx`.
 - `Makefile`: Compiles the project.
-- 
+- `maps`: Contains `valid` and `invalid` maps that can be used to run and test the program.
+- `textures`: Contains .xpm image files that are loaded into the game.
+- `README.md`: Project overview and usage instructions.
+
+
