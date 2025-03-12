@@ -13,6 +13,7 @@ In this repository you can find the code implementation for the SO_LONG project 
 This project demonstrates skills in C programming, graphics programming, memory management, and algorithm design (e.g., pathfinding).
 
 ### REPOSITORY STRUCTURE
+Version for Linux and macOS inside `linux_version` and `macos_version` directories, respectively.
 - `src`: Contains the source code for the program.
 - `includes`: Contains the header file `so_long.h`, `libft`, which is a custom library for utility functions, and the graphics library `minilibx`.
 - `Makefile`: Compiles the project.
