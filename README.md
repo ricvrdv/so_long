@@ -36,3 +36,16 @@ Version for Linux and macOS inside `linux_version` and `macos_version` directori
 
 **Path validation:** Ensures the map has a valid path for the player to collect all items and reach the exit.
 
+### USAGE
+1. **Compile the program:**
+```
+make
+```
+
+2. **Run the program with a map file:**
+```
+./so_long maps/valid/map4_valid.ber
+```
+
+
+
