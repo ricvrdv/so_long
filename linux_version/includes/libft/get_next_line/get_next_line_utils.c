@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rjesus-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: applecore <applecore@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 12:10:28 by rjesus-d          #+#    #+#             */
-/*   Updated: 2025/02/26 14:20:52 by rjesus-d         ###   ########.fr       */
+/*   Updated: 2025/03/12 20:47:05 by applecore        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	gnl_strlen(const char *s)
 	return (len);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*gnl_strchr(const char *s, int c)
 {
 	if (!s)
 		return (NULL);
@@ -39,7 +39,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*gnl_strjoin(char *s1, char *s2)
 {
 	char	*sjoint;
 	size_t	i;
@@ -47,7 +47,7 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	sjoint = (char *)ft_calloc((gnl_strlen(s1) + gnl_strlen(s2) + 1), 1);
+	sjoint = (char *)gnl_calloc((gnl_strlen(s1) + gnl_strlen(s2) + 1), 1);
 	if (!sjoint)
 		return (NULL);
 	i = 0;
@@ -66,7 +66,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (sjoint);
 }
 
-char	*ft_substr(char *s, size_t start, size_t len)
+char	*gnl_substr(char *s, size_t start, size_t len)
 {
 	char	*substring;
 	size_t	s_len;
@@ -79,7 +79,7 @@ char	*ft_substr(char *s, size_t start, size_t len)
 		return (gnl_strdup(""));
 	if (len > s_len - start)
 		len = s_len - start;
-	substring = (char *)ft_calloc(len + 1, sizeof(char));
+	substring = (char *)gnl_calloc(len + 1, sizeof(char));
 	if (!substring)
 		return (NULL);
 	i = 0;
@@ -89,7 +89,7 @@ char	*ft_substr(char *s, size_t start, size_t len)
 	return (substring);
 }
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*gnl_calloc(size_t nmemb, size_t size)
 {
 	size_t			i;
 	unsigned char	*buffer;

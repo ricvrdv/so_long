@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rjesus-d <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: applecore <applecore@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 18:02:44 by rjesus-d          #+#    #+#             */
-/*   Updated: 2025/02/26 14:22:29 by rjesus-d         ###   ########.fr       */
+/*   Updated: 2025/03/12 20:47:51 by applecore        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*get_next_line(int fd)
 		if (!saved)
 			return (NULL);
 	}
-	while (!ft_strchr(saved, '\n'))
+	while (!gnl_strchr(saved, '\n'))
 	{
 		bytes_read = read_file(fd, &saved);
 		if (bytes_read < 0)
@@ -49,14 +49,14 @@ static ssize_t	read_file(int fd, char **saved)
 	char	*temp;
 	ssize_t	bytes_read;
 
-	buffer = (char *)ft_calloc(BUFFER_SIZE + 1, sizeof(char));
+	buffer = (char *)gnl_calloc(BUFFER_SIZE + 1, sizeof(char));
 	if (!buffer)
 		return (-1);
 	bytes_read = read(fd, buffer, BUFFER_SIZE);
 	if (bytes_read <= 0)
 		return (free_and_reset(&buffer), bytes_read);
 	buffer[bytes_read] = '\0';
-	temp = ft_strjoin(*saved, buffer);
+	temp = gnl_strjoin(*saved, buffer);
 	free_and_reset(&buffer);
 	if (!temp)
 		return (*saved = NULL, -1);
@@ -72,14 +72,14 @@ static char	*extract_and_update_line(char **saved)
 	char	*temp;
 	size_t	len;
 
-	new_line = ft_strchr(*saved, '\n');
+	new_line = gnl_strchr(*saved, '\n');
 	if (new_line)
 	{
 		len = new_line - *saved + 1;
-		line = ft_substr(*saved, 0, len);
+		line = gnl_substr(*saved, 0, len);
 		if (!line)
 			return (free_and_reset(saved), NULL);
-		temp = ft_substr(*saved, len, gnl_strlen(*saved) - len);
+		temp = gnl_substr(*saved, len, gnl_strlen(*saved) - len);
 		if (!temp)
 			return (free_and_reset(saved), free_and_reset(&line), NULL);
 		free_and_reset(saved);
@@ -100,7 +100,7 @@ char	*gnl_strdup(const char *s)
 
 	if (!s)
 		return (NULL);
-	buffer = (char *)ft_calloc((gnl_strlen(s) + 1), sizeof(char));
+	buffer = (char *)gnl_calloc((gnl_strlen(s) + 1), sizeof(char));
 	if (!buffer)
 		return (NULL);
 	i = 0;
