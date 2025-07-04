@@ -45,7 +45,10 @@ make
 ./so_long maps/valid/map4_valid.ber
 ```
 
-To win the game open all chests to unlock the computer and exit the game. To close the game press ESC or click the cross on the window with the mouse. 
+To win the game open all chests to unlock the computer and exit the game. To close the game press ESC or click the cross on the window with the mouse.
+
+----
+🐸 Feel free to fork, clone, or contact me for questions or feedback. 
 
 
 
