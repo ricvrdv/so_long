@@ -1,7 +1,5 @@
 # 42 - SO_LONG
 
-### [MILESTONE 2]
-
 <p align="center">
   <img src="https://github.com/ricvrdv/so_long/blob/main/so_long.gif" alt="So Long">
 </p>
