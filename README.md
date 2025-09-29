@@ -14,7 +14,7 @@ This project demonstrates skills in C programming, graphics programming, memory 
 Version for Linux and macOS inside `linux_version` and `macos_version` directories, respectively.
 - `src`: Contains the source code for the program.
 - `includes`: Contains the header file `so_long.h`, `libft`, which is a custom library for utility functions, and the graphics library `minilibx`.
-- `Makefile`: Tells `make` how to compile and link a program.
+- `Makefile`: Tells `make` how to compile and link the program.
 - `maps`: Contains `valid` and `invalid` maps that can be used to run and test the program.
 - `textures`: Contains .xpm image files that are loaded into the game.
 - `README.md`: Project overview and usage instructions.
